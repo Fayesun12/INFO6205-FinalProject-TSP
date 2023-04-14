@@ -1,0 +1,8 @@
+Crime ID,Month,Reported by,Falls within,Longitude,Latitude,Location,LSOA code,LSOA name,Crime type,Last outcome category,Context
+4a14d4745da0a2219ecf913fdc28a0c84ae8408954cac6a0bf7cc46767bb7d26,2023-01,City of London Police,City of London Police,-0.10622,51.518275,On or near B500,E01000916,Camden 027B,Other theft,Under investigation,
+e6e32581c99c5b0f46e5a4d6343e213df349d7069e847dcc6d1389b876261c21,2023-01,City of London Police,City of London Police,-0.10701,51.52148,On or near Saffron Street,E01000916,Camden 027B,Other crime,Under investigation,
+7b7cb8e7debe8b0ec1637e7cb1dad832cea4eba16c5f52fbf2f10ef0e9446f96,2023-01,City of London Police,City of London Police,-0.11035,51.51809,On or near Holborn,E01000917,Camden 027C,Theft from the person,Investigation complete; no suspect identified,
+f7fc44e1e76332f0f575b788522329e6f3ce566fd7472db4f55f8d25c5ade147,2023-01,City of London Police,City of London Police,-0.107682,51.517786,On or near B521,E01000917,Camden 027C,Other crime,Under investigation,
+8083dafd1770af1afca2320c13cbae2420bd2877d9ef29698cbb0fa84f7b27cb,2023-01,City of London Police,City of London Police,-0.111596,51.518281,On or near Chancery Lane,E01000914,Camden 028B,Other theft,Under investigation,
+4587239a45f0e882a523fe63988480f96bb4b96bc00530c40aa7c1acbfb1ada1,2023-01,City of London Police,City of London Police,-0.111596,51.518281,On or near Chancery Lane,E01000914,Camden 028B,Public order,Investigation complete; no suspect identified,
+e38dc5b3060fc999f836e3b853e9ea273e0cbdf4097708d629725a6893d1452c,2023-01,City of London Police,City of London Police,-0.111596,51.518281,On or near Chancery Lane,E01000914,Camden 028B,Theft from the person,Under investigation,

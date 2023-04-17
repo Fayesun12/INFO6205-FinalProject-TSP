@@ -92,7 +92,9 @@ public class FileIO {
 		return cities;
 	}
 	
-
+	/*
+	Saves results of TSP to passed fileName
+	*/
 	public static void writeMap(double totalDistance, Stack<City> path, String fileName){
 		try
 		{	PrintStream writer = new PrintStream( new File(fileName));

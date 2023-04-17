@@ -10,13 +10,11 @@ import java.io.PrintStream;
 public class FileIO {
 
 	/*
-	Returns the string of the filename entered by the user
+	Created by Anson Sun
 	*/
 	public static String getFileName()
 	{
 		Scanner user_input = new Scanner(System.in);
-
-//		String fileName = user_input.nextLine();
 		String fileName = "result.txt";
 		
 		user_input.close();
@@ -29,21 +27,21 @@ public class FileIO {
 	}
 	
 	/*
-	Asks user for input file for tsp
-	Searches for file on local directory
-	Defaults to tsp_example_1.txt 
-	Returns an array of cities for tsp and the filename entered by the user
+	让用户给文件
+	从本地找文件
+	找不到就用 tsp_example_1.txt 
+	返回保存城市数据的数组和文件名
 	*/	
 	public static City[] openMap(String fileName){
 		City[] cities = new City[8];
 		String path="./inputs/";
 		CSVReader reader = null;
 		try {
-			//parsing a CSV file into CSVReader class constructor
+			//读CSV文件
 			reader = new CSVReader(new FileReader("./inputs/test02.csv"));
 			String[] next = reader.readNext();
 			int i = 0;
-			//reads one line at a time
+			//每次读一行
 			while ((next = reader.readNext()) != null) {
 
 				if(null == next){
@@ -61,19 +59,7 @@ public class FileIO {
 
 				cities[i] = new City(next[0],i,Double.parseDouble(next[4]),Double.parseDouble(next[5]));
 				i++;
-				//Crime ID:String
-//				System.out.print("ID-》"+next[0]+"  ");
-//				System.out.println("\n");
-				//id
-//				System.out.println("ID"+i+"  ");
-//
-//				//Longitude:Double
-//				System.out.print("Longitude"+Double.parseDouble(next[4])+"  ");
-//				//Latitude:Double
-//				System.out.print("Latitude"+Double.parseDouble(next[5]));
-//				System.out.print("\n");
 			}
-			// remove null values from array...
 			City[] newCities = new City[i];
 			for(int j = 0; j < i; j++)
 			{
@@ -93,7 +79,7 @@ public class FileIO {
 	}
 	
 	/*
-	Saves results of TSP to passed fileName
+	把计算结果存进文件
 	*/
 	public static void writeMap(double totalDistance, Stack<City> path, String fileName){
 		try
@@ -102,7 +88,6 @@ public class FileIO {
 			while(!path.isEmpty())
 			{
 					writer.printf("%d", path.pop().getId());
-					//writer.printf(path.pop().getCrime());
 					writer.printf("->");
 
 			}

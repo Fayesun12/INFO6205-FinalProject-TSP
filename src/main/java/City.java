@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-	/*
-	Create City in the tsp
-	*/	
+
 
 public class City {
 	private int id;

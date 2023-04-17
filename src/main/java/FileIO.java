@@ -15,16 +15,15 @@ public class FileIO {
 	public static String getFileName()
 	{
 		Scanner user_input = new Scanner(System.in);
-		
-		System.out.printf("Please enter test file name[tsp_example_1.txt]: ");
+
 //		String fileName = user_input.nextLine();
-		String fileName = "tsp_example_4.txt";
+		String fileName = "result.txt";
 		
 		user_input.close();
 		
 		if(fileName.equals(""))
 		{
-			fileName = "tsp_example_4.txt";
+			fileName = "result.txt";
 		}
 		return fileName;
 	}
@@ -40,50 +39,10 @@ public class FileIO {
 		
 		City[] cities = new City[8];
 		String path="./inputs/";
-//		try
-//		{
-//			Scanner file = new Scanner(new File(path+fileName));
-//			int i = 0;
-			//make a city object out of each line in the file
-//			while(file.hasNextLine())
-//			{
-//				//double size of cities if there isn't enough space in the array
-//				if(i >= cities.length)
-//				{
-//					City[] newCities = new City[cities.length * 2];
-//					for(int j = 0; j < cities.length; j++)
-//					{
-//						newCities[j] = cities[j];
-//					}
-//					cities = newCities;
-//				}
-//
-//				cities[i] = new City(file.nextLine());
-//				i++;
-//
-//			}
-//			file.close();
-			
-//			// remove null values from array...
-//			City[] newCities = new City[i];
-//			for(int j = 0; j < i; j++)
-//			{
-//				newCities[j] = cities[j];
-//			}
-//			cities = newCities;
-			//System.out.println("getX"+newCities[0].getX());
-//		}
-//		catch(IOException e)
-//		{
-//			System.out.println( e );
-//			System.exit(1);
-//		}
-
-		//todo
 		CSVReader reader = null;
 		try {
 			//parsing a CSV file into CSVReader class constructor
-			reader = new CSVReader(new FileReader("./inputs/test01.csv"));
+			reader = new CSVReader(new FileReader("./inputs/test02.csv"));
 			String[] next = reader.readNext();
 
 			int i = 0;
@@ -130,7 +89,7 @@ public class FileIO {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		//todo
+
 		
 
 		return cities;
@@ -142,12 +101,12 @@ public class FileIO {
 	public static void writeMap(double totalDistance, Stack<City> path, String fileName){
 		try
 		{	PrintStream writer = new PrintStream( new File(fileName));
-			writer.printf("%.2f\n", totalDistance);
+			writer.printf("Total distance is %.2f\n", totalDistance);
 			while(!path.isEmpty())
 			{
-					//writer.printf("%d\n", path.pop().getId());
-					writer.printf(path.pop().getCrime());
-					writer.printf("\n");
+					writer.printf("%d", path.pop().getId());
+					//writer.printf(path.pop().getCrime());
+					writer.printf("->");
 
 			}
 

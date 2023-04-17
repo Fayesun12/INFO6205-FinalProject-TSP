@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 	/*
-	Create City in the tsp
+	Created By Anson Sun
 	*/
 
 public class City {

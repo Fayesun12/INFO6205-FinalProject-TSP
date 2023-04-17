@@ -35,8 +35,6 @@ public class FileIO {
 	Returns an array of cities for tsp and the filename entered by the user
 	*/	
 	public static City[] openMap(String fileName){
-
-		
 		City[] cities = new City[8];
 		String path="./inputs/";
 		CSVReader reader = null;
@@ -44,7 +42,6 @@ public class FileIO {
 			//parsing a CSV file into CSVReader class constructor
 			reader = new CSVReader(new FileReader("./inputs/test02.csv"));
 			String[] next = reader.readNext();
-
 			int i = 0;
 			//reads one line at a time
 			while ((next = reader.readNext()) != null) {

@@ -419,12 +419,6 @@ public class Christofides {
     public static void main(String[] args) {
         String fileName = FileIO.getFileName();
 		Christofides test = new Christofides(fileName);    //TODO - replace with file input
-        /*
-        for (int i = 0; i < test.N; i++) {
-            for (int j = 0; j < test.N; j++) {
-                test.getDistance(i, j);
-            }
-        }*/
         test.solve();
     }
 }
